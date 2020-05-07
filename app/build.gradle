@@ -85,10 +85,15 @@ dependencies {
     // Test helpers
     testImplementation "androidx.room:room-testing:$room_version"
 
+    //Para manejo de base de datos SQL, ROOM
     annotationProcessor "android.arch.persistence.room:compiler:$room_version"
     kapt "android.arch.persistence.room:compiler:$room_version"
 
+    //Para manejo de TABS
     implementation 'androidx.viewpager2:viewpager2:1.0.0-beta04'
     implementation 'androidx.fragment:fragment-ktx:1.2.0-alpha04'
     implementation 'com.google.android.material:material:1.1.0-alpha10'
+
+    //Librería Picasso para cargar contenido a ImageView a partir de URL
+    implementation 'com.squareup.picasso:picasso:2.71828'
 }

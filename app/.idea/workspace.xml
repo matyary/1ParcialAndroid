@@ -10,27 +10,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d016bbb-f90d-4867-8d3e-f050e46257a7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Fragments/FragmentRegister.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_register.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_exifinterface_exifinterface_1_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okhttp3_okhttp_3_10_0_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okio_okio_1_14_0_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_picasso_picasso_2_71828_aar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/navEditor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/navEditor.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Adapters/SportListAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Adapters/SportListAdapter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Fragments/FragmentLogin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Fragments/FragmentLogin.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Fragments/FragmentSelect.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Fragments/FragmentSelect.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Fragments/FragmentTab1.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Fragments/FragmentTab1.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Fragments/FragmentTab1ViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Fragments/FragmentTab1ViewModel.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Fragments/ListFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Fragments/ListFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Fragments/ListViewModel.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Fragments/NewItem.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Fragments/NewItem.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Fragments/NewItemViewModel.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/database/appDatabase.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/appDatabase.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/database/sportDao.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/sportDao.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_login.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_tab1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_tab1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/list_fragment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/list_fragment.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/navigation/main_navgraph.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/navigation/main_navgraph.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -67,7 +57,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1aqzw9cuVEv3k7hIk1ThTSfjVp8" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -75,7 +65,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../RoomDatabaseExample/app" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">

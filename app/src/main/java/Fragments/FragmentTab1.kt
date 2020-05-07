@@ -12,6 +12,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import com.squareup.picasso.Picasso
 
 import com.utn.tp3.R
 import database.appDatabase
@@ -23,11 +24,6 @@ class FragmentTab1 : Fragment() {
 
     lateinit var imagen: ImageView
     lateinit var texto: TextView
-
-    lateinit var SportClicked: Sport
-
-    private var db: appDatabase? = null
-    private var sportDao: sportDao? = null
 
     companion object {
         fun newInstance() = FragmentTab1()
@@ -47,14 +43,12 @@ class FragmentTab1 : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-                //viewModel = ViewModelProviders.of(this).get(FragmentTab1ViewModel::class.java)
         // TODO: Use the ViewModel
-
-        //db = appDatabase.getAppDataBase(view_tab1.context)
-        //sportDao = db?.sportDao()
-
         viewModel.ItemClicked.observe(viewLifecycleOwner, Observer { result ->
             texto.text = result.descripcion
+            Picasso.get()
+                    .load(result.urlImage)
+                    .into(imagen)
         })
     }
 

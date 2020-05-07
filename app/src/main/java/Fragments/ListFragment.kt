@@ -91,7 +91,6 @@ class ListFragment : Fragment() {
             viewModelTab1.ItemClicked.value = listSport!![position]
             val actiontab = ListFragmentDirections.actionListFragmentToContainerFragment()
             view_sport.findNavController().navigate(actiontab)
-
             //Log.d("Test", listSport!![position].descripcion)
         }
 
