@@ -1,0 +1,83 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/ConstraintLayout"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@drawable/login_deporte"
+tools:context="Fragments.FragmentLogin">
+
+<Button
+    android:id="@+id/button_flogin_to_fselect"
+    android:layout_width="300dp"
+    android:layout_height="150dp"
+    android:background="@drawable/boton"
+    android:text="INICIAR SESIÓN"
+    android:textSize="30sp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="@+id/guideline3" />
+
+<Button
+    android:id="@+id/button_flogin"
+    android:layout_width="300dp"
+    android:layout_height="150dp"
+    android:background="@drawable/boton"
+    android:text="REGISTRARSE"
+    android:textSize="30sp"
+    app:layout_constraintBottom_toTopOf="@+id/guideline3"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+<EditText
+    android:id="@+id/editText_pass_flogin"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:ems="10"
+    android:hint="@string/hint_pass"
+    android:inputType="textPassword"
+    android:textColor="#000000"
+    android:textSize="30sp"
+    app:layout_constraintBottom_toTopOf="@+id/guideline2"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="@+id/guideline" />
+
+<androidx.constraintlayout.widget.Guideline
+    android:id="@+id/guideline"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    app:layout_constraintGuide_percent="0.25" />
+
+<androidx.constraintlayout.widget.Guideline
+    android:id="@+id/guideline2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    app:layout_constraintGuide_percent="0.5" />
+
+<androidx.constraintlayout.widget.Guideline
+    android:id="@+id/guideline3"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    app:layout_constraintGuide_percent="0.75" />
+
+<EditText
+    android:id="@+id/editText_user_flogin"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:ems="10"
+    android:hint="@string/hint_user"
+    android:inputType="text"
+    android:textSize="30sp"
+    app:layout_constraintBottom_toTopOf="@+id/guideline"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

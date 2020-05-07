@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">SPORTAPP</string>
+    <string name="hint_user">Ingrese usuario</string>
+    <string name="hint_pass">Ingrese contraseña</string>
+    <string name="hint_sport_nombre">Ingrese nombre</string>
+    <string name="hint_sport_descripcion">Ingrese descripción</string>
+    <string name="hint_sport_imagen">Ingrese url de imagen</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="textview">TextView</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <!-- TODO: Remove or change this placeholder text -->
+</resources>
