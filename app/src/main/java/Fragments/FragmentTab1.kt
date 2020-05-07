@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 
@@ -32,7 +33,7 @@ class FragmentTab1 : Fragment() {
         fun newInstance() = FragmentTab1()
     }
 
-    private lateinit var viewModel: FragmentTab1ViewModel
+    private val viewModel: FragmentTab1ViewModel by activityViewModels()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
@@ -46,27 +47,21 @@ class FragmentTab1 : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProviders.of(this).get(FragmentTab1ViewModel::class.java)
+                //viewModel = ViewModelProviders.of(this).get(FragmentTab1ViewModel::class.java)
         // TODO: Use the ViewModel
 
-        db = appDatabase.getAppDataBase(view_tab1.context)
-        sportDao = db?.sportDao()
+        //db = appDatabase.getAppDataBase(view_tab1.context)
+        //sportDao = db?.sportDao()
 
         viewModel.ItemClicked.observe(viewLifecycleOwner, Observer { result ->
-            SportClicked.nombre = result.nombre
-            SportClicked.descripcion = result.descripcion
-            SportClicked.urlImage = result.urlImage
-            texto.text = SportClicked.descripcion
-
-            Log.d("Test", SportClicked.descripcion)
-            Log.d("Test2", result.descripcion)
+            texto.text = result.descripcion
         })
     }
 
     override fun onStart() {
         super.onStart()
 
-        Log.d("Test", SportClicked.descripcion)
+        //Log.d("Test", SportClicked.descripcion)
 
     }
 
