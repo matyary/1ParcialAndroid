@@ -31,14 +31,6 @@
         app:layout_constraintBottom_toTopOf="@+id/guideline6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />300
-        android:layout_height=150
-        android:background="@drawable/boton"
-        android:text="AEROBICO"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline6"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
@@ -52,14 +44,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline6" />300
-        android:layout_height=150
-        android:background="@drawable/boton"
-        android:text="MUSCULACION"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline8"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline6" />
+    android:layout_height=150
+    android:background="@drawable/boton"
+    android:text="MUSCULACION"
+    android:textSize="30sp"
+    app:layout_constraintBottom_toTopOf="@+id/guideline8"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="@+id/guideline6" />
 
     <Button
         android:id="@+id/btn_f"
@@ -71,14 +63,17 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline8" />300
-        android:layout_height=150
-        android:background="@drawable/boton"
-        android:text="FLEXIBILIDAD"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline8" />
+        app:layout_constraintTop_toTopOf="@+id/guideline8" /><![CDATA[
 
+    300
+    android:layout_height=150
+    android:background="@drawable/boton"
+    android:text="FLEXIBILIDAD"
+    android:textSize="30sp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="@+id/guideline8" />
+
+]]>
 </androidx.constraintlayout.widget.ConstraintLayout>

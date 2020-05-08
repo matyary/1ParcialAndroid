@@ -7,6 +7,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.Toolbar
+import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 
 import com.utn.tp3.R
@@ -272,5 +274,15 @@ class FragmentSelect : Fragment() {
             val action = FragmentSelectDirections.actionFragmentSelectToListFragment(3, 0)
             view_fselect.findNavController().navigate(action)
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        (activity as AppCompatActivity?)!!.supportActionBar!!.hide()
+    }
+
+    override fun onStop() {
+        super.onStop()
+        (activity as AppCompatActivity?)!!.supportActionBar!!.show()
     }
 }

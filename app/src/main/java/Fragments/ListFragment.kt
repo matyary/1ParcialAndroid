@@ -2,21 +2,25 @@ package Fragments
 
 import Adapters.SportListAdapter
 import Entities.Sport
-import android.os.Bundle
-import android.util.Log
-import android.view.*
-import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
+
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.navArgs
-import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.google.android.material.snackbar.Snackbar
-import com.utn.tp3.R
+
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+
 import database.appDatabase
 import database.sportDao
+
+import androidx.lifecycle.ViewModelProvider
+import com.google.android.material.floatingactionbutton.FloatingActionButton
+
+import android.os.Bundle
+import android.view.*
 import kotlinx.android.synthetic.main.list_fragment.*
+import androidx.fragment.app.Fragment
+
+import com.utn.tp3.R
 
 class ListFragment : Fragment() {
 

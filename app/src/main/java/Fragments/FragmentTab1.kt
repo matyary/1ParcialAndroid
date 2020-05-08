@@ -1,22 +1,17 @@
 package Fragments
 
-import Entities.Sport
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProviders
 import com.squareup.picasso.Picasso
-
 import com.utn.tp3.R
-import database.appDatabase
-import database.sportDao
 
 class FragmentTab1 : Fragment() {
 
@@ -52,11 +47,13 @@ class FragmentTab1 : Fragment() {
         })
     }
 
-    override fun onStart() {
-        super.onStart()
-
-        //Log.d("Test", SportClicked.descripcion)
-
+    override fun onResume() {
+        super.onResume()
+        (activity as AppCompatActivity?)!!.supportActionBar!!.hide()
     }
 
+    override fun onStop() {
+        super.onStop()
+        (activity as AppCompatActivity?)!!.supportActionBar!!.show()
+    }
 }
