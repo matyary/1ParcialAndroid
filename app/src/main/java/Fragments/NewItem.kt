@@ -25,6 +25,7 @@ class NewItem : Fragment() {
 
     lateinit var new_sport_name: EditText
     lateinit var new_sport_description: EditText
+    lateinit var new_sport_frecuencia: EditText
     lateinit var new_sport_urlimg: EditText
     lateinit var btn_a: Button
     lateinit var btn_m: Button
@@ -36,6 +37,7 @@ class NewItem : Fragment() {
 
         new_sport_name = view_new_item.findViewById(R.id.txt_name)
         new_sport_description = view_new_item.findViewById(R.id.txt_description)
+        new_sport_frecuencia = view_new_item.findViewById(R.id.txt_frecuencia)
         new_sport_urlimg = view_new_item.findViewById(R.id.txt_urlImage)
 
         btn_a = view_new_item.findViewById(R.id.btn_aerobico)
@@ -59,6 +61,7 @@ class NewItem : Fragment() {
             sportDao?.insertSport(Sport(idNewSport + 1,
                     new_sport_name.text.toString(),
                     new_sport_description.text.toString(),
+                    new_sport_frecuencia.text.toString(),
                     new_sport_urlimg.text.toString(),
                     type))
 

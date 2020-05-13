@@ -4,6 +4,7 @@
     <string name="hint_pass">Ingrese contraseña</string>
     <string name="hint_sport_nombre">Ingrese nombre</string>
     <string name="hint_sport_descripcion">Ingrese descripción</string>
+    <string name="hint_sport_frecuencia">Ingrese frecuencia</string>
     <string name="hint_sport_imagen">Ingrese url de imagen</string>
 
     <!-- TODO: Remove or change this placeholder text -->

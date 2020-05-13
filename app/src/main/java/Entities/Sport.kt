@@ -7,7 +7,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity(tableName = "sports")
-class Sport (id: Int?, nombre: String?, descripcion: String?, urlImage: String?, tipo: String?) :
+class Sport (id: Int?, nombre: String?, descripcion: String?, frecuencia: String?, urlImage: String?, tipo: String?) :
     Parcelable{
 
     @PrimaryKey
@@ -20,6 +20,9 @@ class Sport (id: Int?, nombre: String?, descripcion: String?, urlImage: String?,
     @ColumnInfo(name = "descripcion")
     var descripcion: String
 
+    @ColumnInfo(name = "frecuencia")
+    var frecuencia: String
+
     @ColumnInfo(name = "urlImage")
     var urlImage: String
 
@@ -30,12 +33,14 @@ class Sport (id: Int?, nombre: String?, descripcion: String?, urlImage: String?,
         this.id = id!!
         this.nombre = nombre!!
         this.descripcion = descripcion!!
+        this.frecuencia = frecuencia!!
         this.urlImage = urlImage!!
         this.tipo = tipo!!
     }
 
     constructor(source: Parcel) : this(
         source.readInt(),
+        source.readString(),
         source.readString(),
         source.readString(),
         source.readString(),
@@ -48,8 +53,9 @@ class Sport (id: Int?, nombre: String?, descripcion: String?, urlImage: String?,
         writeInt(id)
         writeString(nombre)
         writeString(descripcion)
+        writeString(frecuencia)
         writeString(urlImage)
-        writeString(urlImage)
+        writeString(tipo)
     }
 
     companion object {

@@ -29,6 +29,7 @@ class SportListAdapter (private var sportList: MutableList<Sport>,val adapterOnC
     override fun onBindViewHolder(holder: SportHolder, position: Int) {
 
         holder.setName(sportList[position].nombre)
+        holder.setFrecuency(sportList[position].frecuencia)
         holder.getCardLayout().setOnClickListener {
             adapterOnClick(position)
         }
@@ -45,6 +46,11 @@ class SportListAdapter (private var sportList: MutableList<Sport>,val adapterOnC
         fun setName(name : String) {
             val txt : TextView = view.findViewById(R.id.txt_name_item)
             txt.text = name
+        }
+
+        fun setFrecuency(frecuency: String) {
+            val fcy: TextView = view.findViewById(R.id.txt_fcy_item)
+            fcy.text = frecuency
         }
 
         fun getCardLayout (): CardView {
