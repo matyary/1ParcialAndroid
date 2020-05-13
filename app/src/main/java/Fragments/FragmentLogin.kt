@@ -1,12 +1,16 @@
 package Fragments
 
 import Entities.User
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
+import android.widget.ToggleButton
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import com.google.android.material.snackbar.Snackbar
@@ -14,6 +18,7 @@ import com.google.android.material.snackbar.Snackbar
 import com.utn.tp3.R
 import database.appDatabase
 import database.userDao
+import kotlinx.coroutines.newFixedThreadPoolContext
 
 /**
  * A simple [Fragment] subclass.
@@ -32,6 +37,10 @@ class FragmentLogin : Fragment() {
 
     var flag_log_ok : Int =0
 
+    lateinit var mp: MediaPlayer
+    lateinit var sound: ToggleButton
+    lateinit var txtMusic: TextView
+
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
             savedInstanceState: Bundle?
@@ -44,11 +53,27 @@ class FragmentLogin : Fragment() {
         btn_new_user = view_flogin.findViewById(R.id.button_flogin)
         btn_flogin_to_fselect = view_flogin.findViewById(R.id.button_flogin_to_fselect)
 
+        mp = MediaPlayer.create(requireActivity(), R.raw.rocky)
+        sound = view_flogin.findViewById(R.id.music)
+        txtMusic = view_flogin.findViewById(R.id.music_state)
+
         return view_flogin
     }
 
     override fun onStart() {
         super.onStart()
+
+        sound.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) {
+                // The toggle is enabled
+                mp.pause()
+                txtMusic.text = "OFF"
+            } else {
+                // The toggle is disabled
+                mp.start()
+                txtMusic.text = "ON"
+            }
+        }
 
         db = appDatabase.getAppDataBase(view_flogin.context)
         userDao = db?.userDao()
@@ -82,5 +107,17 @@ class FragmentLogin : Fragment() {
                 Snackbar.make(view_flogin, "Datos incompletos", Snackbar.LENGTH_LONG).show()
             }
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        mp.start()
+        txtMusic.text = "ON"
+    }
+
+    override fun onStop() {
+        super.onStop()
+        mp.pause()
+        txtMusic.text = "OFF"
     }
 }

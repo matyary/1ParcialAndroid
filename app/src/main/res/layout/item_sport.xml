@@ -14,14 +14,14 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:alwaysDrawnWithCache="true"
-        android:background="#0536B6">
+        android:background="@drawable/card">
 
         <TextView
             android:id="@+id/txt_name_item"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Abdominales"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/colorPrimaryDark"
             android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

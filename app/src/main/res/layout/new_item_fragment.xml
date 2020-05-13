@@ -5,7 +5,7 @@
     android:id="@+id/layout_new_item"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/login_deporte"
+    android:background="@drawable/lightcolours"
     tools:context="Fragments.NewItem">
 
     <androidx.constraintlayout.widget.Guideline
@@ -73,10 +73,12 @@
 
     <Button
         android:id="@+id/btn_aerobico"
-        android:layout_width="110dp"
-        android:layout_height="150dp"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
         android:background="@drawable/boton"
         android:text="AEROBICO"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline9"
         app:layout_constraintStart_toStartOf="parent"
@@ -84,10 +86,11 @@
 
     <Button
         android:id="@+id/btn_musculacion"
-        android:layout_width="110dp"
-        android:layout_height="150dp"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
         android:background="@drawable/boton"
         android:text="MUSCULACION"
+        android:textColor="@color/colorPrimaryDark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline10"
         app:layout_constraintStart_toStartOf="@+id/guideline9"
@@ -95,10 +98,11 @@
 
     <Button
         android:id="@+id/btn_flexibilidad"
-        android:layout_width="110dp"
-        android:layout_height="150dp"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
         android:background="@drawable/boton"
         android:text="FLEXIBILIDAD"
+        android:textColor="@color/colorPrimaryDark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline10"

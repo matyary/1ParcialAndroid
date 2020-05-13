@@ -1,12 +1,15 @@
 package Fragments
 
 import Entities.User
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
+import android.widget.ToggleButton
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
@@ -31,6 +34,10 @@ class FragmentRegister : Fragment() {
 
     var i : Int =0
 
+    lateinit var mp: MediaPlayer
+    lateinit var sound: ToggleButton
+    lateinit var txtMusic: TextView
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
@@ -40,11 +47,27 @@ class FragmentRegister : Fragment() {
         pass_register = view_register.findViewById(R.id.editText_pass_nuser)
         btn_new_user = view_register.findViewById(R.id.button_newuser)
 
+        mp = MediaPlayer.create(requireActivity(), R.raw.rocky)
+        sound = view_register.findViewById(R.id.music)
+        txtMusic = view_register.findViewById(R.id.music_state)
+
         return view_register
     }
 
     override fun onStart() {
         super.onStart()
+
+        sound.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) {
+                // The toggle is enabled
+                mp.pause()
+                txtMusic.text = "OFF"
+            } else {
+                // The toggle is disabled
+                mp.start()
+                txtMusic.text = "ON"
+            }
+        }
 
         db = appDatabase.getAppDataBase(view_register.context)
         userDao = db?.userDao()
@@ -62,6 +85,18 @@ class FragmentRegister : Fragment() {
             }
 
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        mp.start()
+        txtMusic.text = "ON"
+    }
+
+    override fun onStop() {
+        super.onStop()
+        mp.pause()
+        txtMusic.text = "OFF"
     }
 
 }

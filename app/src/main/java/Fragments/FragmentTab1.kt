@@ -47,7 +47,7 @@ class FragmentTab1 : Fragment() {
         })
     }
 
-    override fun onResume() {
+   override fun onResume() {
         super.onResume()
         (activity as AppCompatActivity?)!!.supportActionBar!!.hide()
     }

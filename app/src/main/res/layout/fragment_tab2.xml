@@ -4,14 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/lightcolours"
     tools:context="Fragments.FragmentTab2">
 
     <Button
         android:id="@+id/btn_mail"
-        android:layout_width="300dp"
-        android:layout_height="150dp"
-        android:text="CORREO ELECTRONICO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:background="@drawable/boton"
+        android:text="CORREO ELECTRONICO"
         app:layout_constraintBottom_toTopOf="@+id/btn_call"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -19,10 +20,10 @@
 
     <Button
         android:id="@+id/btn_wa"
-        android:layout_width="300dp"
-        android:layout_height="150dp"
-        android:text="WHATSAPP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:background="@drawable/boton"
+        android:text="WHATSAPP"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -30,10 +31,10 @@
 
     <Button
         android:id="@+id/btn_call"
-        android:layout_width="300dp"
-        android:layout_height="150dp"
-        android:text="LLAMADA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:background="@drawable/boton"
+        android:text="LLAMADA"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

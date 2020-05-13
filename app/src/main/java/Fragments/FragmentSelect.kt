@@ -209,49 +209,49 @@ class FragmentSelect : Fragment() {
                         "izquierdo por encima de la rodilla flexionada y presiona con el codo para hacer una torsión de espalda. Siente el" +
                         "estiramiento. Repite al otro lado.\n\n" +
                         "Realizar ejercicio durante 30 segundos por cada lado.",
-                "",
+                "https://3.bp.blogspot.com/-OOpJY3Wev0o/Tvxfr70ofaI/AAAAAAAAAko/fmha4fJQU8Q/s1600/Vakrasana.jpg",
                 "FLEXIBILIDAD"))
         sportDao?.insertSport(Sport(18,
                 "SENTADO",
                 "Estira la pierna derecha y flexiona la izquierda llevando el pie hacia la ingle. Mantén el equilibrio. Inclina el" +
                         "cuerpo hacia delante para intentar tocar los dedos de los pies. Cambia de pierna.\n\n" +
                         "Realiza ejercicio durante 30 segundos por cada lado.",
-                "",
+                "https://www.foroatletismo.com/imagenes/2013/07/Rutina-estiramientos-isquiotibiales.jpg",
                 "FLEXIBILIDAD"))
         sportDao?.insertSport(Sport(19,
                 "MUSLOS Y CADERA",
                 "Tumbado boca abajo. Flexiona una pierna y coge el pie con la mano del mismo lado. Tira de ella todo lo que puedas sin que el" +
                         "muslo se despegue del suelo. Cambia de pierna.\n\n" +
                         "Realiza ejercicio durante 30 segundos por cada lado.",
-                "",
+                "https://www.marchasyrutas.es/blog/wp-content/uploads/2017/12/flexibilidad-bicicleta.jpg",
                 "FLEXIBILIDAD"))
         sportDao?.insertSport(Sport(20,
                 "LUMBARES",
                 "Estira una pierna y encoge la otra cogiéndote de la rodilla y tirando de ella hacia el pecho. La pierna estirada no debe levantarse" +
                         "del suelo. Cambia de pierna.\n\n" +
                         "Realiza ejercicio durante 30 segundos por cada lado.",
-                "",
+                "https://mundoentrenamiento.com/wp-content/uploads/2017/06/estiramiento-alivia-dolor-lumbar-888x500.jpg",
                 "FLEXIBILIDAD"))
         sportDao?.insertSport(Sport(21,
                 "ABDUCTORES",
                 "Sentado en el suelo. Abre las piernas estiradas lo más que puedas e inclina el torso hacia delante, sin doblar las rodillas. Estira los brazos" +
                         "e intenta bajar un poco más.\n\n" +
                         "Realiza ejercicio durante 30 segundos.",
-                "",
+                "https://t2.uc.ltmcdn.com/images/0/2/8/estiramiento_para_aumentar_la_flexibilidad_de_la_espalda_49820_10_600.jpg",
                 "FLEXIBILIDAD"))
         sportDao?.insertSport(Sport(22,
                 "ZANCADA EN SOFA",
                 "Una pierna se adelanta, como en las zancadas normales, con la rodilla en 90 grados y la otra está estirada hacia atrás, pero apoyada en un sofá o en" +
                         "una silla. Es difícil mantener la posición. Aguanta y cambia de lado.\n\n" +
                         "Realiza ejercicio durante 30 segundos.",
-                "",
+                "https://i.blogs.es/bb7de2/istock-519531814/450_1000.jpg",
                 "FLEXIBILIDAD"))
         sportDao?.insertSport(Sport(23,
                 "EL PUENTE",
                 "Es una postura de yoga y estira columna, pecho, cuello y hombros. Boca arriba en el suelo con las rodillas flexionadas. Levanta la pelvis y el torso hasta" +
                         "los hombros. Estira los hombros hacia abajo para que queden bien apoyados en el suelo. Mirada al techo y brazos estirados y apoyados en el suelo.\n\n" +
                         "Realiza ejercicio durante 30 segundos.",
-                "",
+                "https://www.yoamoloszapatos.com/wp-content/uploads/2018/07/AdobeStock_83150377-620x414.jpeg",
                 "FLEXIBILIDAD"))
 
         return view_fselect
