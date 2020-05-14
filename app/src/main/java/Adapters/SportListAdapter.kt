@@ -1,6 +1,7 @@
 package Adapters
 
 import Entities.Sport
+import android.net.sip.SipSession
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,7 +10,7 @@ import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.utn.tp3.R
 
-class SportListAdapter (private var sportList: MutableList<Sport>,val adapterOnClick : (pos: Int) -> Unit) : RecyclerView.Adapter<SportListAdapter.SportHolder>() {
+class SportListAdapter (private var sportList: MutableList<Sport>,val adapterOnClick : (pos: Int, action: Int) -> Unit) : RecyclerView.Adapter<SportListAdapter.SportHolder>() {
 
     companion object {
 
@@ -31,7 +32,12 @@ class SportListAdapter (private var sportList: MutableList<Sport>,val adapterOnC
         holder.setName(sportList[position].nombre)
         holder.setFrecuency(sportList[position].frecuencia)
         holder.getCardLayout().setOnClickListener {
-            adapterOnClick(position)
+            val actionclicked = 0
+            adapterOnClick(position, actionclicked)
+        }
+        if (holder.getCardLayout().isSelected){
+            val actionpressed = 1
+            adapterOnClick(position, actionpressed)
         }
     }
 
@@ -57,7 +63,6 @@ class SportListAdapter (private var sportList: MutableList<Sport>,val adapterOnC
 
             return view.findViewById(R.id.card_package_item)
         }
-
     }
-
 }
+

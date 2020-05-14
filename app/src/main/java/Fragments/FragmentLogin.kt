@@ -113,6 +113,7 @@ class FragmentLogin : Fragment() {
         super.onResume()
         mp.start()
         txtMusic.text = "ON"
+        (activity as AppCompatActivity?)!!.supportActionBar!!.show()
     }
 
     override fun onStop() {

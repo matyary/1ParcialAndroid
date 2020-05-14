@@ -4,7 +4,7 @@
     android:id="@+id/ConstraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/lightcolours"
+    android:background="@drawable/fondo"
     tools:context="Fragments.FragmentRegister">
 
     <androidx.constraintlayout.widget.Guideline

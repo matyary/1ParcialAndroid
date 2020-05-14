@@ -91,11 +91,12 @@ class ListFragment : Fragment() {
         linearLayoutManager = LinearLayoutManager(context)
         recSport.layoutManager = linearLayoutManager
 
-        sportListAdapter = SportListAdapter(listSport!!) {position: Int ->
+        sportListAdapter = SportListAdapter(listSport!!) {position: Int, actionlist: Int ->
             viewModelTab1.ItemClicked.value = listSport!![position]
-            val actiontab = ListFragmentDirections.actionListFragmentToContainerFragment()
-            view_sport.findNavController().navigate(actiontab)
-            //Log.d("Test", listSport!![position].descripcion)
+            if (actionlist==0) {
+                val actiontab = ListFragmentDirections.actionListFragmentToContainerFragment()
+                view_sport.findNavController().navigate(actiontab)
+            }
         }
 
         if (flag_newitem == 1)

@@ -4,7 +4,7 @@
     android:id="@+id/ConstraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/lightcolours"
+    android:background="@drawable/fondo"
     tools:context="Fragments.FragmentLogin">
 
     <Button
@@ -99,7 +99,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="OFF"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="@color/colorTitle"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline17"
         app:layout_constraintEnd_toEndOf="parent"

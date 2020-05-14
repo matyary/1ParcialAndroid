@@ -5,7 +5,7 @@
     android:id="@+id/layout_new_item"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/lightcolours"
+    android:background="#009688"
     tools:context="Fragments.NewItem">
 
     <androidx.constraintlayout.widget.Guideline

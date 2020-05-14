@@ -5,23 +5,24 @@
     android:id="@+id/card_package_item"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="8dp"
+    android:layout_margin="2dp"
     android:backgroundTintMode="add"
     app:cardCornerRadius="12dp"
-    app:cardElevation="20dp">
+    app:cardElevation="8dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:alwaysDrawnWithCache="true"
-        android:background="@drawable/card">
+        android:background="@drawable/card"
+        android:backgroundTint="#009688">
 
         <TextView
             android:id="@+id/txt_name_item"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Abdominales"
-            android:textColor="@color/colorPrimaryDark"
+            android:textColor="@color/design_default_color_background"
             android:textSize="24sp"
             app:layout_constraintBottom_toTopOf="@+id/guideline18"
             app:layout_constraintEnd_toEndOf="parent"
@@ -33,6 +34,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="1 serie de 30"
+            android:textColor="@color/colorPrimaryDark"
             android:textSize="18sp"
             android:textStyle="bold|italic"
             app:layout_constraintBottom_toBottomOf="parent"
