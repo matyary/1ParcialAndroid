@@ -20,6 +20,7 @@ import android.util.Log
 import android.view.*
 import kotlinx.android.synthetic.main.list_fragment.*
 import androidx.fragment.app.Fragment
+import com.google.android.material.snackbar.Snackbar
 
 import com.utn.tp3.R
 
@@ -99,7 +100,8 @@ class ListFragment : Fragment() {
                     view_sport.findNavController().navigate(actiontab)
                 }){positionLong: Int ->
                     selectedSport = listSport!![positionLong]
-                    Log.d("posicion", selectedSport!!.nombre)
+                    //Log.d("posicion", selectedSport!!.nombre)
+                    Snackbar.make(view_sport, "Presione icono de borrado para eliminar ítem seleccionado", Snackbar.LENGTH_LONG).show()
                 }
 
         if (flagList == 1)
@@ -128,7 +130,7 @@ class ListFragment : Fragment() {
             }
 
             R.id.action_erase -> {
-                val action_toolbar_erase = ListFragmentDirections.actionListFragmentToFragmentSelect(selectedSport)
+                val action_toolbar_erase = ListFragmentDirections.actionListFragmentToDialogFragment(selectedSport)
                 view_sport.findNavController().navigate(action_toolbar_erase)
             }
 

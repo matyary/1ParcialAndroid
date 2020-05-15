@@ -1,11 +1,15 @@
 package Adapters
 
 import Entities.Sport
+import android.graphics.Color
+import android.graphics.Paint
 import android.net.sip.SipSession
+import android.os.Build
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.annotation.RequiresApi
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.utn.tp3.R
@@ -35,6 +39,7 @@ class SportListAdapter (private var sportList: MutableList<Sport>,val adapterOnC
             adapterOnClick(position)
         }
         holder.getCardLayout().setOnLongClickListener {
+            holder.getCardLayout().setBackgroundColor(Color.MAGENTA)
             adapterOnLongClick(position)
             return@setOnLongClickListener true
         }

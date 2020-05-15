@@ -27,6 +27,9 @@
         <action
             android:id="@+id/action_listFragment_to_fragmentSelect"
             app:destination="@id/fragmentSelect" />
+        <action
+            android:id="@+id/action_listFragment_to_dialogFragment"
+            app:destination="@id/dialogFragment" />
     </fragment>
     <fragment
         android:id="@+id/fragmentLogin"
@@ -76,5 +79,18 @@
         <action
             android:id="@+id/action_fragmentRegister_to_fragmentLogin"
             app:destination="@id/fragmentLogin" />
+    </fragment>
+    <fragment
+        android:id="@+id/dialogFragment"
+        android:name="Fragments.DialogFragment"
+        android:label="DialogFragment" >
+        <argument
+            android:name="EraseQuestionSport"
+            app:argType="Entities.Sport"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <action
+            android:id="@+id/action_dialogFragment_to_fragmentSelect"
+            app:destination="@id/fragmentSelect" />
     </fragment>
 </navigation>
