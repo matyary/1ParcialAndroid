@@ -27,6 +27,6 @@ public interface sportDao {
     @Query("SELECT MAX(id) AS id FROM sports")
     fun getIDofLastSport(): Int
 
-    @Query("SELECT * FROM sports WHERE id = :id")
-    fun getSportClicked(id: Int): Sport?
+    @Query("SELECT COUNT(*) FROM sports")
+    fun verifyEmptyTable(): Int
 }

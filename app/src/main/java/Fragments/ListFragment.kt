@@ -16,6 +16,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 import android.os.Bundle
+import android.util.Log
 import android.view.*
 import kotlinx.android.synthetic.main.list_fragment.*
 import androidx.fragment.app.Fragment
@@ -32,6 +33,7 @@ class ListFragment : Fragment() {
     private var sportDao: sportDao? = null
 
     private var listSport : MutableList<Sport>? = null
+    private var selectedSport : Sport? = null
 
     private lateinit var viewModelTab1: FragmentTab1ViewModel
 
@@ -56,7 +58,6 @@ class ListFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
 
         viewModelTab1 = ViewModelProvider(requireActivity()).get(FragmentTab1ViewModel::class.java)
-
         // TODO: Use the ViewModel
     }
 
@@ -67,7 +68,7 @@ class ListFragment : Fragment() {
         sportDao = db?.sportDao()
 
         val actividad = args.actividad
-        val flag_newitem = args.newitem
+        val flagList = args.flaglist
 
         when (actividad){
 
@@ -91,15 +92,17 @@ class ListFragment : Fragment() {
         linearLayoutManager = LinearLayoutManager(context)
         recSport.layoutManager = linearLayoutManager
 
-        sportListAdapter = SportListAdapter(listSport!!) {position: Int, actionlist: Int ->
-            viewModelTab1.ItemClicked.value = listSport!![position]
-            if (actionlist==0) {
-                val actiontab = ListFragmentDirections.actionListFragmentToContainerFragment()
-                view_sport.findNavController().navigate(actiontab)
-            }
-        }
+        sportListAdapter = SportListAdapter(listSport!!,
+                {position: Int ->
+                    viewModelTab1.ItemClicked.value = listSport!![position]
+                    val actiontab = ListFragmentDirections.actionListFragmentToContainerFragment()
+                    view_sport.findNavController().navigate(actiontab)
+                }){positionLong: Int ->
+                    selectedSport = listSport!![positionLong]
+                    Log.d("posicion", selectedSport!!.nombre)
+                }
 
-        if (flag_newitem == 1)
+        if (flagList == 1)
             sportListAdapter.notifyDataSetChanged()
 
         recSport.adapter = sportListAdapter
@@ -120,8 +123,13 @@ class ListFragment : Fragment() {
         when(item.itemId) {
 
             R.id.action_add -> {
-                val action_toolbar = ListFragmentDirections.actionListFragmentToNewItem()
-                view_sport.findNavController().navigate(action_toolbar)
+                val action_toolbar_add = ListFragmentDirections.actionListFragmentToNewItem()
+                view_sport.findNavController().navigate(action_toolbar_add)
+            }
+
+            R.id.action_erase -> {
+                val action_toolbar_erase = ListFragmentDirections.actionListFragmentToFragmentSelect(selectedSport)
+                view_sport.findNavController().navigate(action_toolbar_erase)
             }
 
             else -> ""

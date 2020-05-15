@@ -21,9 +21,12 @@
             android:id="@+id/action_listFragment_to_newItem"
             app:destination="@id/newItem" />
         <argument
-            android:name="newitem"
+            android:name="flaglist"
             android:defaultValue="0"
             app:argType="integer" />
+        <action
+            android:id="@+id/action_listFragment_to_fragmentSelect"
+            app:destination="@id/fragmentSelect" />
     </fragment>
     <fragment
         android:id="@+id/fragmentLogin"
@@ -45,6 +48,11 @@
         <action
             android:id="@+id/action_fragmentSelect_to_listFragment"
             app:destination="@id/listFragment" />
+        <argument
+            android:name="sportToErase"
+            app:argType="Entities.Sport"
+            app:nullable="true"
+            android:defaultValue="@null" />
     </fragment>
     <fragment
         android:id="@+id/containerFragment"

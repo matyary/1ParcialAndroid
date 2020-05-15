@@ -7,4 +7,11 @@
         android:icon="@drawable/add"
         android:title="add"
         app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_erase"
+        android:icon="@drawable/erase"
+        android:title="erase"
+        app:showAsAction="ifRoom" />
+
 </menu>

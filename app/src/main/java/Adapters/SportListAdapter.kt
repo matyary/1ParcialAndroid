@@ -10,7 +10,7 @@ import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.utn.tp3.R
 
-class SportListAdapter (private var sportList: MutableList<Sport>,val adapterOnClick : (pos: Int, action: Int) -> Unit) : RecyclerView.Adapter<SportListAdapter.SportHolder>() {
+class SportListAdapter (private var sportList: MutableList<Sport>,val adapterOnClick: (pos: Int) -> Unit, val adapterOnLongClick: (pos: Int) -> Unit) : RecyclerView.Adapter<SportListAdapter.SportHolder>() {
 
     companion object {
 
@@ -32,12 +32,11 @@ class SportListAdapter (private var sportList: MutableList<Sport>,val adapterOnC
         holder.setName(sportList[position].nombre)
         holder.setFrecuency(sportList[position].frecuencia)
         holder.getCardLayout().setOnClickListener {
-            val actionclicked = 0
-            adapterOnClick(position, actionclicked)
+            adapterOnClick(position)
         }
-        if (holder.getCardLayout().isSelected){
-            val actionpressed = 1
-            adapterOnClick(position, actionpressed)
+        holder.getCardLayout().setOnLongClickListener {
+            adapterOnLongClick(position)
+            return@setOnLongClickListener true
         }
     }
 

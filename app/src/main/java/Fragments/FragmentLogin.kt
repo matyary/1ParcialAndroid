@@ -18,7 +18,6 @@ import com.google.android.material.snackbar.Snackbar
 import com.utn.tp3.R
 import database.appDatabase
 import database.userDao
-import kotlinx.coroutines.newFixedThreadPoolContext
 
 /**
  * A simple [Fragment] subclass.
